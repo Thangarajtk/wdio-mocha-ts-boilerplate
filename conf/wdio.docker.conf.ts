@@ -1,6 +1,6 @@
-import { config as sharedConfig } from './wdio.conf';
+import { config as sharedConfig } from './wdio.conf.ts';
 
-exports.config = {
+export const config = {
     ...sharedConfig,
     ...{
         hostname: 'localhost',

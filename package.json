@@ -6,23 +6,25 @@
   "author": "Thangaraj",
   "type": "module",
   "devDependencies": {
-    "@wdio/allure-reporter": "^8.8.6",
-    "@wdio/cli": "^8.8.0",
-    "@wdio/globals": "^8.8.6",
-    "@wdio/local-runner": "^8.8.0",
-    "@wdio/mocha-framework": "^8.8.0",
-    "@wdio/selenium-standalone-service": "^8.8.0",
-    "@wdio/spec-reporter": "^8.8.0",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.0.4",
+    "@wdio/allure-reporter": "^8.27.0",
+    "@wdio/cli": "^8.27.1",
+    "@wdio/globals": "^8.27.0",
+    "@wdio/local-runner": "^8.27.0",
+    "@wdio/mocha-framework": "^8.27.0",
+    "@wdio/spec-reporter": "^8.27.0",
+    "allure-commandline": "^2.25.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
     "wdio-docker-service": "^3.2.1",
-    "wdio-wait-for": "^3.0.3"
+    "wdio-wait-for": "^3.0.10"
   },
   "scripts": {
+    "checkdependiesupgrade": "npx ncu -u",
     "test": "wdio run ./conf/wdio.conf.ts",
     "pretest:docker": "docker-compose up -d",
     "test:docker": "wdio run ./conf/wdio.docker.conf.ts",
-    "posttest:docker": "docker-compose down"
+    "posttest:docker": "docker-compose down",
+    "generatereport": "allure generate reports/allure-results -o reports/allure-report --clean && allure open reports/allure-report"
   },
   "repository": {
     "type": "git",
@@ -33,5 +35,8 @@
     "typescript",
     "mocha framework",
     "docker"
-  ]
+  ],
+  "dependencies": {
+    "npm-check-updates": "^16.14.12"
+  }
 }

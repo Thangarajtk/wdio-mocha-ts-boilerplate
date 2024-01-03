@@ -1,5 +1,7 @@
 node_modules
 
+# Log files
 logs
 
+# Report files
 reports
