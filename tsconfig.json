@@ -8,8 +8,7 @@
             "node",
             "@wdio/globals/types",
             "expect-webdriverio",
-            "@wdio/mocha-framework",
-            "@wdio/selenium-standalone-service"
+            "@wdio/mocha-framework"
         ],
         "target": "es2022"
     }
