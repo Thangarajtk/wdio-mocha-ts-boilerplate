@@ -1,9 +1,4 @@
-import type { Options } from '@wdio/types'
-
-/**
- * The configuration file contains all necessary information to run your test suite. It’s a NodeJS module that exports a JSON.
- */
-export const config: Options.Testrunner = {
+export const config = {
     //
     // ====================
     // Runner Configuration
@@ -76,10 +71,11 @@ export const config: Options.Testrunner = {
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
-    },
-    {
-        browserName: 'microsoftedge',
-    }],
+    }
+    // {
+    //     browserName: 'microsoftedge',
+    // }
+    ],
     //
     // ===================
     // Test Configurations
